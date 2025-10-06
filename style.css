@@ -1,0 +1,63 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "nav-menu nav-menu nav-menu"
+    "main-img main-img main-img"
+    "main1 main2 side-nav"
+    "support1 support2 side-nav";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  min-height: 100vh;
+}
+
+/* Assign grid areas */
+.nav-menu { grid-area: nav-menu; background-color: lightblue; }
+.main-img { grid-area: main-img; background-color: lightgreen; text-align: center; }
+.main1 { grid-area: main1; background-color: lightcoral; padding: 20px; }
+.main2 { grid-area: main2; background-color: lightgoldenrodyellow; padding: 20px; }
+.side-nav { grid-area: side-nav; background-color: red; color: white; padding: 20px; }
+.support1 { grid-area: support1; background-color: red; color: white; padding: 20px; }
+.support2 { grid-area: support2; background-color: red; color: white; padding: 20px; }
+
+/* Nav list styling */
+.nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Fixed footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
